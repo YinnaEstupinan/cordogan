@@ -48,31 +48,69 @@
                                
     <div class="contenedor">
         <aside>
-          <!-- Inicio widget calendario-colombia.com -->
-<link rel="stylesheet" href="https://cdn.calendario-colombia.com/widget_blanco.css">
-<script src="https://www.calendario-colombia.com/widget.js"></script>
-<!-- Fin widget calendario-colombia.com -->
-            <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/co"><span style="color:rgb(7, 7, 7);">Hora actual en</span><br />Colombia</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FBogota" width="100%" height="115" frameborder="0" seamless></iframe> </div>
-            <iframe src="https://www.meteoblue.com/en/weather/widget/daily/panqueba_colombia_3672981?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 420px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/panqueba_colombia_3672981?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank"></a></div>
+            <div id='calendar'><strong>Loading...</strong></div>
+            <script>
+            var conf = {
+             bgcolor: '#5692ce', 
+             newtab:  0,         // 0:abre link en la misma ventana | 1:abre link en ventana nueva
+             tooltip: false,      // false:title por defecto | true:tooltip con css3
+             start:   1,         // 0:Domingo | 1:Lunes
+             days:    "Lunes|Martes|Miercoles|Jueves|Viernes|Sabado|Domingo",
+             months:  "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre",
+             date:    "Ir al mes actual"
+            }
+            </script>
+            <script src='https://cdn.jsdelivr.net/gh/jmacuna/calendar-widget@master/create-calendar.js' type='text/javascript'></script>
+            <script src='https://www.tecnoblog.guru/feeds/posts/summary?max-results=1000&alt=json-in-script&orderby=published&callback=createCalendar' type='text/javascript'></script>
+            
+            <style type="text/css">
+            @font-face {
+              font-family: 'Catamaran';
+              src: local('Catamaran Regular'), local('Catamaran-Regular'), url(https://fonts.gstatic.com/s/catamaran/v4/o-0IIpQoyXQa2RxT7-5r5TRA.woff2) format('woff2');
+            }
+            #contentDate *{font-family:'Catamaran'!important}
+            #spanLeft, #spanRight, #spanMonth, #spanYear{border:0;cursor:pointer;line-height:20px!important;background-color:#5692ce;padding:0!important}
+            #spanMonth,#spanYear{background-color:#fff!important;font-size:16px!important;color:#000!important;border:0!important;cursor:text!important;pointer-events:none}
+            #spanLeft:before{content:'<';font-size:15px;color:#fff;display:inline-block;padding:0 10px!important}
+            #spanRight:after{content:'>';font-size:15px;color:#fff;display:inline-block;padding:0 10px!important}
+            #spanLeft:hover, #spanRight:hover{background-color:#515151!important}
+            #spanLeft img, #spanRight img, #spanMonth img, #spanYear img{display:none}
+            #contentDate table{margin-bottom:0!important}
+            #contentDate table tr td{padding:0}
+            #contentDate table tr td a{width: 28px;display:inline-block}
+            #contentDate table tr td a[style='text-decoration:none;color:#000;cursor:default;border-radius:100%;border:2px solid #5692ce;cursor:pointer;'], #contentDate table tr td a[style='text-decoration:none;color:#000;cursor:default;border-radius:100%;border:2px solid #5692ce;cursor:pointer;border-radius:100%;border:2px solid #5692ce;cursor:pointer;'] {border:0!important;border-radius:0!important;background-color:#4080cc;color:#fff!important}
+            #contentDate table tr td a[style='text-decoration:none;color:#000;cursor:default;border-radius:100%;border:2px solid #5692ce;cursor:pointer;'] span {color:#fff!important}
+            #contentDate table tr td a[style='text-decoration:none;color:#000;cursor:default;border-radius:100%;border:2px solid #5692ce;cursor:pointer;']:hover {background:#515151}
+            #contentDate table{box-shadow:none!important;font-size:13px!important;width:100%!important}
+            #contentDate table tr{background:#fff!important}
+            #contentDate table tr td{text-align:center!important}
+            #contentDate{width:240px!important; display:inline-block}
+            #lblToday{background:#fff}
+            #lblToday a{color:#bd3434!important; font-size:medium; width:auto!important}
+            </style>
+<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/co"><span style="color:gray;">Hora actual en</span><br />Colombia</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=large&timezone=America%2FBogota" width="100%" height="140" frameborder="0" seamless></iframe> </div>
         </aside>
         
         <section>
             <h1>CORDOGAN</h1>
-            <a href="https://picasion.com/"><img src="https://i.picasion.com/pic91/d5eb4e867e10d7a697cbb555cad90f06.gif" width="300" height="49" border="0" alt="https://picasion.com/" /></a><br /><a href="https://picasion.com/">
+            <a href=""><img src="https://i.picasion.com/pic91/d5eb4e867e10d7a697cbb555cad90f06.gif" width="300" height="49" border="0" alt="" /></a><br /><a href="">
 
              
           
-             <iframe width="460" height="315" src="https://www.youtube.com/embed/c0uiH3NRdHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <iframe width="460" height="300" src="https://www.youtube.com/embed/c0uiH3NRdHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             
      </section>
         <aside>
-           
-            <img src="imagen/whatsapp-descargar-gratis.jpeg.jpg" width="280"cheight="100" alt="sistema">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAsadero-Campestre-Cordogan-571666413199906%2F%3Fref%3Dpages_you_manage&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="315" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><br>
+            
+            
+            
         </aside>
     </div>
     <footer>
-        <h6>Correo El-ectronico: ingyinnam17@yahoo.com    Skype: yinnajp3105   Fecha 27-02-2021< </h6>
+        <a href="https://api.whatsapp.com/send?phone=3212622639">Envíanos un mensaje de WhatsApp</a>
+        <img src="imagen/imagen what.jpg" width="50"  height="50"  alt="">
        
     </footer>
 </body>
